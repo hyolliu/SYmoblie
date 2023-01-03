@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第二页</title>
+		<style type="text/css">
+		
+		html{
+			width: 640px;
+			height: 1030px;
+			margin:0 auto;
+		}
+		body{
+			background-image:url(img/17.png);
+			background-repeat: no-repeat;
+			background-position:center;
+			background-size: 640px 1030px;
+		}
+		.yun5{
+			 position: absolute;
+			 z-index: 1;
+			 margin-left: -200px;
+			 margin-top: -50px;
+			 
+		}
+		.yun6{
+			 position: absolute;
+			 z-index: 1;
+			 margin-top: 600px;
+			 margin-left: 100px;
+		}
+		.yun7{
+			 position: absolute;
+			 z-index: 1;
+			 margin-top: -550px;
+			 margin-left: -150px;
+		}
+		.yun8{
+			position: absolute;
+			z-index: 1;
+			margin-top: 750px;
+			margin-left: -450px;
+		}
+		.duihua{
+			position: absolute;
+			z-index: 2;
+			margin-top: 100px;
+			margin-left: 200px;
+			overflow: hidden;
+			cursor: pointer;
+			transition: all 1s;
+			-webkit-animation-name: fadeInOut;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-duration: 12s;
+			-webkit-animation-direction: alternate;
+			
+		}
+		
+		.duihua:hover{
+					transform: scale(1.2);
+					
+		}
+		@-webkit-keyframes fadeInOut {
+		    0% {
+		        opacity:0;
+		     }
+		    25% {
+		        opacity:1;
+		    }
+		    40% {
+		        opacity: 0.5;    
+		    }
+		    75% {
+		        opacity:0;
+		    }
+			
+		}
+		
+		    
+		
+
+		</style>
+		<script type="text/javascript">
+					
+					setInterval("pausedFadenum()",10000);
+					function pausedFadenum(){
+						let elem = document.querySelector('.duihua');
+						elem.style['animationPlayState'] = 'paused';
+					}
+					function countDown(){
+							
+							setTimeout("location.href='https://hyolliu.github.io/SYmoblie/songshan/index3.html'",11000);
+					              
+						}
+						
+						countDown();
+					
+					
+				</script>
+			
+	</head>
+	<body>
+		<div class=clouds>
+			<div class="yun5"><img width="1100px" height="700px"  src="img/yun.png"/></div>
+			<div class="yun6"><img width="1000px" height="500px"  src="img/yun2.png"/></div>
+			<div class="yun7"><img width="1500px" height="950px" src="img/yun3.png"/></div>
+			<div class="yun8"><img width="900px" height="600px" src="img/yun4.png"/></div>
+			
+		</div>
+		<div class="duihua"><img width="200px" height="700px" src="img/29.png"/></div>
+	</body>
+</html>

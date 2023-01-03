@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>生成了</title>
+		<style type="text/css">
+			html{
+				width: 640px;
+				height: 1030px;
+				margin:0 auto;
+			}
+			body{
+				background-image:url(img/4.png);
+				background-repeat: no-repeat;
+				background-position:center;
+				background-size: 640px 1030px;
+			}
+			.share{
+				position: relative;
+				z-index: 2;
+				top: -200px;
+			}
+			.bj1{
+				position: relative;
+				z-index: 1;
+				top: -560px;
+				left: -150px;
+			}
+			.bj2{
+				position: relative;
+				z-index: 1;
+				top: -1125px;
+				left: 36px;
+			}
+			.bj3{
+				position: relative;
+				z-index: 1;
+				top: -1690px;
+				left: 220px;
+			}
+			.wenzi2{
+				position: relative;
+				z-index: 1;
+				top: -2500px;
+				left: -150px;
+				animation: fadeInAnimation ease 6s; 
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+			@keyframes fadeInAnimation { 
+			            0% { 
+			                opacity: 0; 
+			            } 
+			            100% { 
+			                opacity: 1; 
+			            } 
+			        } 
+			.tree{
+				position: relative;
+				z-index: 1;
+				top: -3125px;
+				left: 320px;
+			}
+			.shanmian{
+				position: relative;
+				z-index: 1;
+				top: -4005px;
+				left: 100px;
+			}
+			.bird{
+				position: relative;
+				z-index: 1;
+				top: -4755px;
+				left: 65px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<script>
+		function Download(){
+		        
+		        var type ='png';
+		        var d=document.getElementById("cavasimg");
+		        var imgdata=d.toDataURL(type);
+		        //2.0 将mime-type改为image/octet-stream,强制让浏览器下载
+		        var fixtype=function(type){
+		            type=type.toLocaleLowerCase().replace(/jpg/i,'jpeg');
+		            var r=type.match(/png|jpeg|bmp|gif/)[0];
+		            return 'image/'+r;
+		        };
+		        imgdata=imgdata.replace(fixtype(type),'image/octet-stream');
+		        //3.0 将图片保存到本地
+		        var savaFile=function(data,filename)
+		        {
+		            var save_link=document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+		            save_link.href=data;
+		            save_link.download=filename;
+		            var event=document.createEvent('MouseEvents');
+		            event.initMouseEvent('click',true,false,window,0,0,0,0,0,false,false,false,false,0,null);
+		            save_link.dispatchEvent(event);
+		        };
+		        var filename=''+new Date().getSeconds()+'.'+type;  
+		        //我想用当前秒是可以解决重名的问题了 不行你就换成毫秒
+		        savaFile(imgdata,filename);
+		        };
+				
+				function showDiv(){
+				          $(".wenzi2").fadeIn(800);
+				      }
+			</script>	
+		<div class="bj"><img width=100% height=100% src="img/5.png"/></div>
+		<div class="share"><img width=100% height=100% onclick="Download()" src="img/2.png"/></div>
+		<div class="bj1"><img width=90% height=90% src="img/3.png"/></div>
+		<div class="bj2"><img width=90% height=90% src="img/3.png"/></div>
+		<div class="bj3"><img width=90% height=90% src="img/3.png"/></div>
+		<div class="wenzi2"><img width=90% height=90%  src="img/1.png"/></div>
+		<div class="tree"><img width=50% height=50% src="img/15.png"/></div>
+		<div class="shanmian"><img width=70% height=70% src="img/32.png"/></div>
+		<div class="bird"><img width=80% height=80% src="img/33.png"/></div>
+		<canvas  id="cavasimg" width="607" height="367"  ></canvas> 
+	</body>
+</html>

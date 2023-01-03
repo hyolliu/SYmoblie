@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>宋扇3</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      html{
+        width: 640px;
+        height: 1030px;
+        margin: 0 auto;
+      }
+      body{
+        background-image: url("beijing1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 640px 1030px;
+        position: absolute;
+        
+      }
+     
+      .image1{
+        z-index:8;
+        position: absolute;
+        overflow: hidden;
+        text-align: center;
+        margin-left: 500px;
+        margin-top: 50px;
+      }
+      .image1:hover{
+        
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+
+      .image2{
+        z-index: 5;
+        position: absolute;
+        overflow: hidden;
+        margin:0 auto;
+        animation:star 5s linear infinite;
+      }
+      @keyframes star{
+	    0%{opacity:0.9}
+      25%{opacity:0.3}
+      50%{opacity:0.7}
+      75%{opacity:0.9}
+      100%{opacity:1}
+      }
+
+      .image3{
+        z-index: 4;
+        position: absolute;
+        overflow: hidden;
+        margin-top:250px;
+        animation:yunt 3s  linear infinite;
+      }
+      @keyframes yunt{
+	    0%{opacity:0.9}
+      25%{opacity:0.3}
+      50%{opacity:0.6}
+      75%{opacity:0.9}
+      100%{opacity:1}
+      }      
+
+      .image4{
+        z-index:3;
+        position: absolute;
+        overflow: hidden;
+        margin-top:-150px;
+        margin-left:-350px;
+        animation:yunt 3s linear infinite;
+      }
+      @keyframes yunt{
+	    0%{opacity:1}
+      25%{opacity:0.6}
+      50%{opacity:0.3}
+      75%{opacity:0.6}
+      100%{opacity:1}
+      }      
+    </style>
+  </head>
+  <body>
+    
+    <a href="https://hyolliu.github.io/SYmoblie/songshan/index4.html"><div class="image1"><img src="wenzi2.png" alt="" width="150px" height="350px" /></div></a>
+
+    <div class="image2"><img src="yun2.png" alt="" width="900px" height="300px"/></div>
+
+    <div class="image3"><img src="yun1.png" alt="" width="900px" height="300px"/></div>
+
+    <div class="image4"><a href="http://www.w3school.com.cn"></a><img src="yun3.png" alt="" width="900px" height="300px"/></div>
+
+  </body>
+
+</html>

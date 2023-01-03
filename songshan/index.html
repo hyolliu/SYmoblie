@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<title>宋扇</title>
+		<style type="text/css">
+			
+			html{
+				width: 640px;
+				height: 1030px;
+				margin:0 auto;
+			}
+			body{
+				background-image:url(img/10.jpg);
+				background-repeat: no-repeat;
+				background-position:center;
+				background-size: 640px 1030px;
+			}
+			.yun{
+				position: absolute;
+				z-index: 150;
+				margin-top: -850px;
+				margin-left: -100px;
+				animation:fadenum 10s;
+				
+			}
+			.yun2{
+				position: absolute;
+				z-index: 150;
+				margin-top: -650px;
+				margin-left: -300px;
+				animation:fadenum 10s;
+				animation-fill-mode:forwards;
+			}
+			.yun3{
+				position: absolute;
+				z-index: 150;
+				margin-top: -550px;
+				margin-left: 15px;
+				animation:yun4 12s;
+				animation-fill-mode:forwards;
+			}
+			.yun4{
+				position: absolute;
+				z-index: 150;
+				margin-top:-750px;
+				margin-left: -230px;
+				animation:yun4 12s;
+				animation-fill-mode:forwards;
+			}
+			
+			
+			@keyframes fadenum{
+			
+			  100%{transform:translateX(-200px);opacity:0;}
+			
+			}
+			
+			@keyframes yun4{
+			
+			  100%{transform:translateX(200px);opacity:0;}
+			
+			}
+			.shan{
+				
+				 position: relative;
+				 padding-top: 0px;
+			}
+			.shan img{
+				position: absolute;
+				left: -70px; 
+				top:-800px;
+				max-height: 800px;
+				max-width: 800px;
+			}
+			.song{
+				position: relative;
+				z-index: 500;
+				margin-top: 700px;
+				margin-left: 400px;
+			}
+			.sheng{
+				position: relative;
+				z-index: 500;
+				margin-top: -50px;
+				margin-left: 510px;
+			}
+		</style>	
+		<script type="text/javascript">
+					
+					setInterval("pausedFadenum()",10000);
+					function pausedFadenum(){
+						let elem = document.querySelector('.yun');
+						elem.style['animationPlayState'] = 'paused';
+					}
+					function countDown(){
+							
+							setTimeout("location.href='https://hyolliu.github.io/SYmoblie/songshan/index2.html'",10200);
+					              
+						}
+						
+						countDown();
+					
+					
+				</script>
+		
+	</head>
+	<body>
+		<div class="clouds">
+			<div class="yun"><img width="1200px" height="750px" src="img/yun.png" onclick="move()"/></div>
+			<div class="yun2"><img width="1000px" height="750px" src="img/yun2.png"/></div>
+			<div class="yun3"><img width="1000px" height="700px" src="img/yun3.png"/></div>
+			<div class="yun4"><img width="1200px" height="700px" src="img/yun4.png"/></div>
+		</div>
+		<div class="shan">
+			<img src="img/13.png" /></div>
+		<div class="song"><img width="300px" height="250px" src="img/12.png" /></div>
+		<div class="sheng"><img width="100px" height="100px" src="img/39.png" /></div>
+	</body>
+</html>

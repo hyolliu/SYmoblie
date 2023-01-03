@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>随便挑选</title>
+		<style type="text/css">
+		html{
+			width: 640px;
+			height: 1030px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+		body{
+			background-image:url(img/4.png);
+			background-repeat: no-repeat;
+			background-position:center;
+			background-size: 640px 1030px;
+			
+		}
+		.wenzi{
+			position: absolute;
+			z-index: 2;
+			top: 120px;
+
+		}
+		.queren{
+			position: relative;
+			z-index: 0;
+			left: 170px;
+			top: -160px;
+		}
+		.shanzi{
+			position: relative;
+			z-index: 2;
+			top: 430px;
+			left: -9px;
+			
+		}
+		.shangyibu{
+			position: relative;
+			
+			top: -765px;
+			left: -120px;
+		}
+		.shanmian{
+			position:relative;
+			z-index: 1;
+			top: -850px;
+			left: 45px;
+		}
+		.bd1{
+			position:relative;
+			z-index: 2;
+			top: -970px;
+			left: 400px;
+		}
+		.bd2{
+			position:relative;
+			z-index: 2;
+			top: -1200px;
+			left: 150px;
+		}
+		.bd3{
+			position:relative;
+			z-index: 2;
+			top: -1535px;
+		}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		
+		<script>
+		    window.onload = () => {
+		        //获取拖拽实验对象
+		        let el=document.getElementById("thing1");
+		        //在该对象上绑定鼠标点击事件
+		        el.onmousedown = (e) => {
+		            //鼠标按下，计算鼠标触点距离元素左侧和顶部的距离
+		            let disX = e.clientX - el.offsetLeft;
+		            let disY = e.clientY - el.offsetTop;
+		            document.onmousemove = function (e) {
+		              //计算需要移动的距离
+		              let tX = e.clientX - disX;
+		              let tY = e.clientY - disY;
+		              //移动当前元素
+		              if (tX >= 0 && tX <= window.innerWidth - el.offsetWidth) {
+		                el.style.left = tX + 'px';
+		              } 
+		              if (tY >= 0 && tY <= window.innerHeight - el.offsetHeight) {
+		                el.style.top = tY + 'px';
+		              } 
+		            };
+		            //鼠标松开时，注销鼠标事件，停止元素拖拽。
+		            document.onmouseup = function (e) {
+		                document.onmousemove = null;
+		                document.onmouseup = null;
+		            };
+		        }   
+		    }
+		</script>
+	
+		<div class="wenzi"><img width=85% height=85% src="img/11.png"/></div>
+		<a href="https://hyolliu.github.io/SYmoblie/songshan/diy2.html"><div class="queren"><img width=100% height=100% src="img/30.png"/></div></a>
+			
+		<div class="shanzi"><img width=103% height=101% src="img/10(1).png"/></div>
+		<div class="shangyibu">
+		<a href="https://hyolliu.github.io/SYmoblie/songshan/diy.html" onClick="javascript :history.back(-1);"><img width=80% height=80% src="img/31.png"/></a>
+		</div>
+		<div class="shanmian"><img width=90% height=90% src="img/32.png"/></div>
+		<div id="thing1">
+		<div class="bd1" ><img  draggable="true" width=25% height=25% src="img/34.png" /></div>
+		<div class="bd2"><img draggable="true" width=50% height=50% src="img/35.png"/></div>
+		<div class="bd3"><img draggable="true" width=50% height=50% src="img/36.png"/></div>
+		</div>
+	</body>
+</html>
